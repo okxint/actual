@@ -203,7 +203,7 @@ async function monthly1stor3rd(startDate, accountId) {
     d.subWeeks(parseDate(startDate), 8),
     14,
     start => {
-      const day = d.format(new Date(), 'iiii');
+      const day = d.format(start, 'iiii');
       const dayValue = day.slice(0, 2).toUpperCase();
 
       return {
@@ -224,7 +224,7 @@ async function monthly2ndor4th(startDate, accountId) {
     d.subMonths(parseDate(startDate), 8),
     14,
     start => {
-      const day = d.format(new Date(), 'iiii');
+      const day = d.format(start, 'iiii');
       const dayValue = day.slice(0, 2).toUpperCase();
 
       return {
